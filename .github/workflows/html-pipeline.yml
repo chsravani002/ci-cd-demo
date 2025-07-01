@@ -17,3 +17,8 @@ jobs:
 
     - name: Simulate deployment
       run: echo "Simulated deployment of static site"
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.demo1 }}
+        publish_dir: index.html
